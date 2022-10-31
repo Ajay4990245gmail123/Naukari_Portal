@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <link href="/static/naukriResult.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div>
+        <h1> Job Details</h1>
+        <table>
+            <tr class="tableColor">
+                <th>jobRole</th>
+                <th>companyName</th>
+                <th>companyRating</th>
+                <th>Experiance</th>
+                <th> Job Location</th>
+                <th>mainSkils</th>
+                <th>Salary</th>
+                <th>PostDate</th>
+            </tr>
+            {% for review in job_details %}
+            <tr class="tab">
+                <td>
+                    {{review['jobRole']}}
+                </td>
+                <td>
+                    {{review['companyName']}}
+                </td>
+                <td>
+                    {{review['companyRating']}}
+                </td>
+                <td>
+                    {{review['Experiance']}}
+                </td>
+                <td>
+                    {{review['Location']}}
+                </td>
+                <td>
+                    {{review['mainSkils']}}
+                </td>
+                <td>
+                    {{review['Salary']}}
+                </td>
+                <td>
+                    {{review['PostDate']}}
+                </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
