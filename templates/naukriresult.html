@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Movie Details</title>
+    <title>job search</title>
     <link href="/static/naukriResult.css" rel="stylesheet">
 </head>
 
 <body>
 
     <div>
+<!--        heading-->
         <h1> Job Details</h1>
+<!--        create table-->
         <table>
             <tr class="tableColor">
+<!--                create table headings-->
                 <th>jobRole</th>
                 <th>companyName</th>
                 <th>companyRating</th>
@@ -22,6 +25,8 @@
                 <th>Salary</th>
                 <th>PostDate</th>
             </tr>
+<!--            using jinja method-->
+<!--            Using for loop-->
             {% for review in job_details %}
             <tr class="tab">
                 <td>
@@ -50,6 +55,7 @@
                 </td>
 
             </tr>
+<!--            ending for loop-->
             {% endfor %}
         </table>
     </div>
